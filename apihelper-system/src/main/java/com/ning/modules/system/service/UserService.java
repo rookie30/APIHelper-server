@@ -1,8 +1,10 @@
 package com.ning.modules.system.service;
 
 import com.ning.modules.security.dto.UserDto;
-import com.ning.modules.system.pojo.User;
-import org.springframework.stereotype.Service;
+import com.ning.modules.system.domain.Role;
+import com.ning.modules.system.domain.User;
+
+import java.util.Set;
 
 public interface UserService {
 
@@ -23,7 +25,8 @@ public interface UserService {
      * @param username
      * @return
      */
-    UserDto findByName(String username);
+//    UserDto findByName(String username);
+    User findByName(String username);
 
     /**
      * 修改邮箱
@@ -32,5 +35,33 @@ public interface UserService {
      */
     void updateEmail(String username, String email);
 
-    void updatePassword(String username, String password);
+    /**
+     * 删除用户
+     * @param ids /
+     */
+    void delete(Set<Long> ids);
+
+    /**
+     * 修改密码
+     * @param username 用户名
+     * @param encryptPassword 密码
+     */
+    void updatePass(String username, String encryptPassword);
+
+    /**
+     * 根据手机查找用户
+     * @param phone 手机号
+     * @return
+     */
+    User findByPhone(String phone);
+
+    /**
+     * 根据邮箱查找账号
+     * @param email 邮箱
+     * @return
+     */
+    User findByEmail(String email);
+
+    String login(String username, String password);
+
 }

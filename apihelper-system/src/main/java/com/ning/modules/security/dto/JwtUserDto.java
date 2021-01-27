@@ -1,64 +1,72 @@
 package com.ning.modules.security.dto;
 
-import com.alibaba.fastjson.annotation.JSONField;
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.ning.modules.system.domain.Role;
+import com.ning.modules.system.domain.User;
 import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
+import java.util.*;
 
 @Getter
-@AllArgsConstructor
+@Setter
 public class JwtUserDto implements UserDetails {
 
-    private final UserDto user;
+    private User user;
 
-    private final List<Long> dataScopes;
-
-    @JSONField(serialize = false)
-    private final List<GrantedAuthority> authorities;
-
-    public Set<String> getRoles() {
-        return authorities.stream().map(GrantedAuthority::getAuthority).collect(Collectors.toSet());
+    public JwtUserDto(User user) {
+        this.user = user;
     }
 
     @Override
-    @JSONField(serialize = false)
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        Set<Role> userRoles = user.getRoles();
+        List<GrantedAuthority> auths = new ArrayList<>(userRoles.size());
+        userRoles.parallelStream().forEach(userRole -> {
+            // 默认ROLE_  为前缀，可以更改
+            auths.add(new SimpleGrantedAuthority("ROLE_" + userRole.getName()));
+        });
+        return auths;
+    }
+
+    @Override
     public String getPassword() {
         return user.getPassword();
     }
 
     @Override
-    @JSONField(serialize = false)
     public String getUsername() {
         return user.getUsername();
     }
 
-    @JSONField(serialize = false)
+    // 账户是否未过期
+    @JsonIgnore
     @Override
     public boolean isAccountNonExpired() {
         return true;
     }
 
-    @JSONField(serialize = false)
+    // 账户是否未锁定
+    @JsonIgnore
     @Override
     public boolean isAccountNonLocked() {
         return true;
     }
 
-    @JSONField(serialize = false)
+    // 密码是否未过期
+    @JsonIgnore
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
+    // 账户是否激活
+    @JsonIgnore
     @Override
-    @JSONField(serialize = false)
     public boolean isEnabled() {
-        return user.getEnabled();
+        return true;
     }
-
 }

@@ -64,11 +64,12 @@
             <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
 
-        <!--spring boot 热部署-->
+        <!--spring boot 配置注入-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
         </dependency>
+
 
         <!--Spring boot Redis-->
         <dependency>

@@ -11,7 +11,6 @@
 
     <artifactId>apihelper-system</artifactId>
     <properties>
-        <jjwt.version>0.11.1</jjwt.version>
         <!-- oshi监控需要指定jna版本, 问题详见 https://github.com/oshi/oshi/issues/1040 -->
         <jna.version>5.6.0</jna.version>
     </properties>
@@ -26,20 +25,9 @@
         <!-- jwt -->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-api</artifactId>
-            <version>${jjwt.version}</version>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.0</version>
         </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-impl</artifactId>
-            <version>${jjwt.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-jackson</artifactId>
-            <version>${jjwt.version}</version>
-        </dependency>
-
         <!-- quartz -->
         <dependency>
             <groupId>org.quartz-scheduler</groupId>

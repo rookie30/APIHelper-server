@@ -7,16 +7,12 @@ import cn.hutool.core.util.IdUtil;
 import com.ning.modules.config.SecurityProperties;
 import com.ning.utils.RedisUtils;
 import io.jsonwebtoken.*;
-import io.jsonwebtoken.io.Decoders;
-import io.jsonwebtoken.security.Keys;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletRequest;
-import java.security.Key;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -27,41 +23,36 @@ public class TokenProvider{
 
     private final SecurityProperties properties;
     private final RedisUtils redisUtils;
-    public static final String AUTHORITIES_KEY = "user";
-    private JwtParser jwtParser;
-    private JwtBuilder jwtBuilder;
+    private static final String CLAIM_KEY_USERNAME = "sub";
+    private static final String CLAIM_KEY_CREATED = "created";
 
     public TokenProvider(SecurityProperties properties, RedisUtils redisUtils) {
         this.properties = properties;
         this.redisUtils = redisUtils;
     }
 
-//    @Override
-//    public void afterPropertiesSet() {
-//        byte[] keyBytes = Decoders.BASE64.decode(properties.getBase64Secret());
-//        Key key = Keys.hmacShaKeyFor(keyBytes);
-//        jwtParser = Jwts.parserBuilder()
-//                .setSigningKey(key)
-//                .build();
-//        jwtBuilder = Jwts.builder()
-//                .signWith(key, SignatureAlgorithm.HS512);
-//    }
 
     /**
      * 创建Token 设置永不过期，
      * Token 的时间有效性转到Redis 维护
      *
-     * @param authentication /
+     * @param username /
      * @return /
      */
-    public String createToken(Authentication authentication) {
-        return jwtBuilder
+    public String createToken(String username) {
+        Map<String, Object> claims = new HashMap<>();
+        claims.put(CLAIM_KEY_USERNAME, username);
+        claims.put(CLAIM_KEY_CREATED, new Date());
+        return Jwts.builder()
+                .signWith(SignatureAlgorithm.HS512, properties.getBase64Secret())
                 // 加入ID确保生成的 Token 都不一致
                 .setId(IdUtil.simpleUUID())
-                .claim(AUTHORITIES_KEY, authentication.getName())
-                .setSubject(authentication.getName())
+                .setSubject(username)
+                .setClaims(claims)
+                .setIssuedAt(new Date())
                 .compact();
     }
+
 
     /**
      * 依据Token 获取鉴权信息
@@ -69,17 +60,20 @@ public class TokenProvider{
      * @param token /
      * @return /
      */
-    Authentication getAuthentication(String token) {
+    public Authentication getAuthentication(String token) {
         Claims claims = getClaims(token);
         User principal = new User(claims.getSubject(), "******", new ArrayList<>());
         return new UsernamePasswordAuthenticationToken(principal, token, new ArrayList<>());
     }
 
     public Claims getClaims(String token) {
-        return jwtParser
+        return Jwts.parser()
+                .setSigningKey(properties.getBase64Secret())
                 .parseClaimsJws(token)
                 .getBody();
     }
+
+
 
     /**
      * @param token 需要检查的token
@@ -105,4 +99,30 @@ public class TokenProvider{
         return null;
     }
 
+    public String getUsername(String token) {
+        return getClaims(token)
+                .getSubject();
+    }
+
+    public Date getCreatedDateFromToken(String token) {
+        Date created;
+        try {
+            final Claims claims = getClaims(token);
+            created = new Date((Long) claims.get(CLAIM_KEY_CREATED));
+        } catch (Exception e) {
+            created = null;
+        }
+        return created;
+    }
+
+//    public Boolean validateToken(String token, UserDetails userDetails) {
+//        JwtUserDto user = (JwtUserDto) userDetails;
+//        final String username = getUsername(token);
+//        final Date created = getCreatedDateFromToken(token);
+////        final Date expiration = getExpirationDateFromToken(token);
+//        return (
+//                username.equals(user.getUsername())
+//                        && !isTokenExpired(token)
+//                        && !isCreatedBeforeLastPasswordReset(created, user.getLastPasswordResetDate()));
+//    }
 }

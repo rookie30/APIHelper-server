@@ -15,6 +15,7 @@ public class UserDto {
 
     private String username;
 
+    @JSONField(serialize = false)
     private String password;
 
     private String nickname;
@@ -23,7 +24,7 @@ public class UserDto {
 
     private Integer gender;
 
-    private Integer role;
+    private Set<RoleSmallDto> roles;
 
     private Date createTime;
 

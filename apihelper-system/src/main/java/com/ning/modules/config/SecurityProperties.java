@@ -1,11 +1,12 @@
 package com.ning.modules.config;
 
 import lombok.Data;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Data
-@Component
+//@Component
+//@ConfigurationProperties(prefix = "jwt")
 public class SecurityProperties {
 
     /**

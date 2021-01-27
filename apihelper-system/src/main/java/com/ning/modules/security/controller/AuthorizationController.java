@@ -8,33 +8,45 @@ import com.ning.modules.config.SecurityProperties;
 import com.ning.modules.security.TokenProvider;
 import com.ning.modules.security.dto.AuthUserDto;
 import com.ning.modules.security.dto.JwtUserDto;
-import com.ning.modules.system.repository.UserRepository;
+import com.ning.modules.security.service.UserDetailsServiceImpl;
+import com.ning.modules.system.domain.Role;
+import com.ning.modules.system.domain.User;
+import com.ning.modules.system.repository.RoleRepository;
+import com.ning.modules.system.service.Impl.RoleServiceImpl;
+import com.ning.modules.system.service.Impl.UserServiceImpl;
+import com.ning.modules.system.service.UserService;
 import com.ning.utils.BadRequestException;
 import com.ning.utils.RedisUtils;
 import com.ning.utils.RsaUtils;
 import com.ning.utils.StringUtils;
 import com.wf.captcha.base.Captcha;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpEntity;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
+@Slf4j
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
+@Api(tags = "系统：系统授权接口")
 public class AuthorizationController {
     private final SecurityProperties properties;
     private final RedisUtils redisUtils;
@@ -42,7 +54,10 @@ public class AuthorizationController {
     private final TokenProvider tokenProvider;
     @Resource
     private LoginProperties loginProperties;
-    private UserRepository userRepository;
+    private final UserService userService;
+    // 测试模块
+    private final RoleServiceImpl roleService;
+    private final UserDetailsServiceImpl userDetailsService;
 
 
     @ApiOperation("登录授权")
@@ -50,6 +65,7 @@ public class AuthorizationController {
     public ResponseEntity<Object> login(@Validated @RequestBody AuthUserDto authUserDto) throws Exception {
         // 密码解密
         String password = RsaUtils.decryptByPrivateKey(RsaProperties.privateKey, authUserDto.getPassword());
+        String username = authUserDto.getUsername();
         // 查询验证码
         String code = (String) redisUtils.get(authUserDto.getUuid());
         // 清除验证码
@@ -61,20 +77,18 @@ public class AuthorizationController {
             throw new BadRequestException("验证码错误");
         }
         UsernamePasswordAuthenticationToken authenticationToken =
-                new UsernamePasswordAuthenticationToken(authUserDto.getUsername(), password);
+                new UsernamePasswordAuthenticationToken(username, password);
         Authentication authentication = authenticationManagerBuilder.getObject().authenticate(authenticationToken);
-//        SecurityContextHolder.getContext().setAuthentication(authentication);
-//
-//        // 生成令牌
-//        String token = tokenProvider.createToken(authentication);
-//        final JwtUserDto jwtUserDto = (JwtUserDto) authentication.getPrincipal();
-//        // 返回 token 与 用户信息
-//        Map<String, Object> authInfo = new HashMap<String, Object>(2) {{
-//            put("token", properties.getTokenStartWith() + token);
-//            put("user", jwtUserDto);
-//        }};
-//        return ResponseEntity.ok(authInfo);
-        return new ResponseEntity<>(authenticationToken, HttpStatus.OK);
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+        // 生成令牌
+        String token = tokenProvider.createToken(authUserDto.getUsername());
+        final JwtUserDto jwtUserDto = (JwtUserDto) authentication.getPrincipal();
+        // 返回 token 与 用户信息
+        Map<String, Object> authInfo = new HashMap<String, Object>(2) {{
+            put("token", properties.getTokenStartWith() + token);
+            put("user", jwtUserDto);
+        }};
+        return ResponseEntity.ok(authInfo);
     }
 
     @ApiOperation("获取验证码")
@@ -107,4 +121,17 @@ public class AuthorizationController {
 
     }
 
+    @GetMapping("/test")
+    public ResponseEntity<Object> test(@RequestParam("username") String username) {
+//        List<Role> roles = roleService.findByUserId(id);
+        UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+        return new ResponseEntity<>(userDetails, HttpStatus.OK);
+    }
+
+    @PostMapping("/userTest")
+    public ResponseEntity<Object> userTest(@RequestBody AuthUserDto authUserDto) {
+        String username = authUserDto.getUsername();
+        return ResponseEntity.ok(username);
+    }
+    // P0Vh3QJyRaup94AMitU2awyXE1KECYCZHIPxOCnvF/MeSuX/XDLi2NMPK1xBdGTKkMqaPZyrv94Q2FUxKzVHAg==
 }

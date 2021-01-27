@@ -1,4 +1,4 @@
-package com.ning.modules.system.pojo;
+package com.ning.modules.system.domain;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
@@ -12,16 +12,19 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "sys_user")
 @EntityListeners(AuditingEntityListener.class)
-public class User {
+public class User implements Serializable {
 
     @Id
+    @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotNull(groups = Update.class)
     private Long id;
@@ -36,6 +39,13 @@ public class User {
     @ApiModelProperty(value = "用户昵称")
     private String nickname;
 
+    @ManyToMany
+    @ApiModelProperty(value = "用户角色")
+    @JoinTable(name = "sys_users_roles",
+            joinColumns = {@JoinColumn(name = "user_id",referencedColumnName = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "role_id",referencedColumnName = "role_id")})
+    private Set<Role> roles;
+
     @Email
     @NotBlank(message = "邮箱不能为空")
     @ApiModelProperty(value = "用户邮箱")
@@ -43,9 +53,6 @@ public class User {
 
     @ApiModelProperty(value = "用户性别")
     private Integer gender = 0;
-
-    @ApiModelProperty(value = "用户角色")
-    private Integer role = 0;
 
     @Column(name = "create_time")
     @CreatedDate

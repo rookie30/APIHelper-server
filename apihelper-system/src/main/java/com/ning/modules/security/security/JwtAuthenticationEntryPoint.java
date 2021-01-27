@@ -1,4 +1,4 @@
-package com.ning.modules.security;
+package com.ning.modules.security.security;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

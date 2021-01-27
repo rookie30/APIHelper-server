@@ -1,4 +1,4 @@
-package com.ning.modules.security;
+package com.ning.modules.security.security;
 
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;

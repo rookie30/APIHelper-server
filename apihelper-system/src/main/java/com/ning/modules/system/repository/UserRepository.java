@@ -1,13 +1,16 @@
 package com.ning.modules.system.repository;
 
-import com.ning.modules.system.pojo.User;
+import com.ning.modules.system.domain.Role;
+import com.ning.modules.system.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.Set;
+
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer> {
+public interface UserRepository extends JpaRepository<User, Long>, JpaSpecificationExecutor<User> {
 
     /**
      * 根据账号查询
@@ -29,6 +32,9 @@ public interface UserRepository extends JpaRepository<User, Integer> {
      * @return
      */
     User findByEmail(String email);
+
+
+
 
 
 }

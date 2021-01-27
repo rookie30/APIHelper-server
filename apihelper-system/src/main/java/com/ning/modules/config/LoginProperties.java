@@ -11,7 +11,6 @@ import java.awt.*;
 import java.util.Objects;
 
 @Data
-@Component
 public class LoginProperties {
 
     private LoginCode loginCode;
