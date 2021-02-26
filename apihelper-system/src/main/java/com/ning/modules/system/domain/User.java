@@ -3,6 +3,7 @@ package com.ning.modules.system.domain;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Proxy;
 import org.hibernate.sql.Update;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -39,7 +40,7 @@ public class User implements Serializable {
     @ApiModelProperty(value = "用户昵称")
     private String nickname;
 
-    @ManyToMany
+    @ManyToMany(cascade = {CascadeType.REFRESH},fetch = FetchType.EAGER)
     @ApiModelProperty(value = "用户角色")
     @JoinTable(name = "sys_users_roles",
             joinColumns = {@JoinColumn(name = "user_id",referencedColumnName = "user_id")},

@@ -2,55 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="673480ba-6023-4148-8db8-9b9ba2cd30d0" name="默认" comment="">
-      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/ConfigBeanConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/ConfigurerAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/RoleSmallDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JwtAuthenticationTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/service/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/ProjectController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/ProjectLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/vo/UserPassVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/ProjectLogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/ProjectRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/ProjectLogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/ProjectServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/ProjectLogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/ProjectService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/dto/PageUtilDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/dto/ProjectPageDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/LoginProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/LoginProperties.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/SecurityProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/SecurityProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/JwtAccessDeniedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JwtAccessDeniedHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/JwtAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JwtAuthenticationEntryPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/TokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/TokenProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/controller/AuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/controller/AuthorizationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/JwtUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/JwtUserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/utils/JwtTokenUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/utils/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/utils/RedisUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/resources/config/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/resources/config/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/config/LoginProperties$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/config/LoginProperties$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/config/LoginProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/config/LoginProperties.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/config/SecurityProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/config/SecurityProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/JwtAccessDeniedHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/JwtAuthenticationEntryPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/TokenProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/TokenProvider.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/controller/AuthorizationController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/controller/AuthorizationController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/controller/AuthorizationController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/controller/AuthorizationController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/controller/AuthorizationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/controller/AuthorizationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/dto/JwtUserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/dto/JwtUserDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/dto/UserDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/controller/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/pojo/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/controller/RegisterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/domain/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/repository/UserRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/service/Impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/service/Impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/utils/JwtTokenUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/utils/RedisUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/utils/RedisUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/config/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/config/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/apihelper-system/target/" />
@@ -102,24 +84,35 @@
     <session id="-1929168160">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="24" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.40" value="1" />
+          <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.43" value="1" />
-          <entry key="project.open.time.46" value="1" />
+          <entry key="project.open.time.44" value="1" />
+          <entry key="project.open.time.46" value="3" />
           <entry key="project.open.time.47" value="1" />
-          <entry key="project.open.time.5" value="3" />
+          <entry key="project.open.time.5" value="6" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="100" />
-          <entry key="java" value="375" />
+          <entry key="class" value="109" />
+          <entry key="java" value="457" />
           <entry key="sql" value="1" />
+          <entry key="sys_project" value="1" />
           <entry key="sys_user" value="2" />
           <entry key="xml" value="25" />
           <entry key="yml" value="24" />
@@ -127,9 +120,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="100" />
-          <entry key="Database Element" value="2" />
-          <entry key="JAVA" value="375" />
+          <entry key="CLASS" value="109" />
+          <entry key="Database Element" value="3" />
+          <entry key="JAVA" value="457" />
           <entry key="Scratch" value="1" />
           <entry key="XML" value="25" />
           <entry key="YAML" value="24" />
@@ -137,8 +130,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="22" />
-          <entry key="java" value="9861" />
+          <entry key="dummy" value="26" />
+          <entry key="java" value="17339" />
           <entry key="txt" value="10" />
           <entry key="xml" value="118" />
           <entry key="yml" value="66" />
@@ -146,8 +139,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9861" />
-          <entry key="PLAIN_TEXT" value="32" />
+          <entry key="JAVA" value="17338" />
+          <entry key="PLAIN_TEXT" value="36" />
+          <entry key="Spring Data QL" value="1" />
           <entry key="XML" value="118" />
           <entry key="YAML" value="66" />
         </counts>
@@ -155,118 +149,239 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JwtAuthenticationTokenFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JwtAuthenticationEntryPoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JwtAccessDeniedHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/SecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="52" column="40" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/resources/config/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/resources/config/application-dev.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/SecurityProperties.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/service/UserDetailsServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/RoleServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#545#546#0" expanded="true" />
-                <element signature="e#616#617#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/RoleService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/UserController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-589">
+                  <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/User.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="152">
+                  <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="46" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/Project.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="138">
+                  <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/ProjectLog.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="779">
+                  <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/vo/UserPassVo.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="76">
+                  <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/ProjectService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="171">
+                  <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/ProjectServiceImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="461">
+                  <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/ProjectController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="333">
+                  <caret line="63" column="38" lean-forward="true" selection-start-line="63" selection-start-column="38" selection-end-line="67" selection-end-column="7" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/dto/PageUtilDto.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="171">
+                  <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/dto/ProjectPageDto.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="209">
+                  <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/ProjectService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="304">
+                  <caret line="16" selection-start-line="16" selection-end-line="16" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/UserServiceImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="580">
+                  <caret line="55" selection-start-line="55" selection-end-line="55" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/ProjectRepository.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="2" selection-start-column="2" selection-end-column="2" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/UserRepository.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="114">
+                  <caret line="16" column="91" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="91" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/ProjectServiceImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="290">
+                  <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#941#942#0" expanded="true" />
+                    <element signature="e#1010#1011#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/ProjectLogService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="76">
+                  <caret line="4" column="34" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/ProjectLogServiceImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="247">
+                  <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#529#530#0" expanded="true" />
+                    <element signature="e#554#555#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/ProjectLogRepository.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="190">
+                  <caret line="10" selection-start-line="10" selection-end-line="10" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/ProjectLog.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="347">
+                  <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="44" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -295,22 +410,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/service/OnlineUserService.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/TokenConfigurer.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/TokenFilter.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/RoleDto.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/utils/UserCacheClean.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/utils/StringUtils.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JwtAccessDeniedHandler.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JwtAuthenticationEntryPoint.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/resources/config/application.yml" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/utils/RedisUtils.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/CorsConfig.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/AuthenticationInterceptor.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/annotations/AnonymousAccess.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/PermissionConfig.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/AuthenticationInterceptor.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/UserDto.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/RoleSmallDto.java" />
@@ -327,25 +426,41 @@
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/RegisterController.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/pojo/User.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/service/UserDetailsImpl.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/JwtUserDto.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JWTAuthorizationFilter.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JWTAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/Role.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/RoleRepository.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/RoleService.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/TokenConfigurer.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/TokenFilter.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/RoleServiceImpl.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/service/UserDetailsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JwtAuthenticationTokenFilter.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/ConfigBeanConfiguration.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/AuthUserDto.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/TokenProvider.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/UserService.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/User.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/JwtUserDto.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JwtAuthenticationTokenFilter.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/vo/UserPassVo.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/controller/AuthorizationController.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/UserService.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/Project.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/ProjectService.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/PageUtil.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/ProjectPage.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/dto/PageUtilDto.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/dto/ProjectPageDto.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/ProjectController.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/ProjectRepository.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/ProjectLogService.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/ProjectLogRepository.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/ProjectLogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/ProjectLog.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/ProjectServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -401,6 +516,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -499,45 +615,6 @@
               <item name="ning" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apihelperserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APIHelper-server" type="462c0819:PsiDirectoryNode" />
-              <item name="apihelper-system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ning" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apihelperserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APIHelper-server" type="462c0819:PsiDirectoryNode" />
-              <item name="apihelper-system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ning" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apihelperserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APIHelper-server" type="462c0819:PsiDirectoryNode" />
-              <item name="apihelper-system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ning" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -618,29 +695,11 @@
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="Impl" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="apihelperserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APIHelper-server" type="462c0819:PsiDirectoryNode" />
-              <item name="apihelper-system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apihelperserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APIHelper-server" type="462c0819:PsiDirectoryNode" />
-              <item name="apihelper-system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -652,7 +711,7 @@
     <property name="SearchEverywhereHistoryKey" value="AuthUserDto&#9;FILE&#9;file://D:/workPlace/APIHelper/APIHelper-server/apihelper-system/src/main/java/com/ning/modules/security/dto/AuthUserDto.java&#10;authUserDto&#9;PSI&#9;JAVA://com.ning.modules.security.dto.AuthUserDto&#10;JwtToken&#9;PSI&#9;JAVA://com.ning.utils.JwtTokenUtils&#10;auditorAware&#9;PSI&#9;JAVA://org.springframework.data.domain.AuditorAware" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1611751983351" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1614346516849" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/apihelper-common/src/main/java/com/ning" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../eladmin/eladmin-server" />
@@ -709,12 +768,31 @@
       <workItem from="1611451171376" duration="15438000" />
       <workItem from="1611537381155" duration="16859000" />
       <workItem from="1611626664304" duration="24568000" />
-      <workItem from="1611709090096" duration="18314000" />
+      <workItem from="1611709090096" duration="20168000" />
+      <workItem from="1611798554023" duration="2232000" />
+      <workItem from="1611881998440" duration="10473000" />
+      <workItem from="1611969614354" duration="5486000" />
+      <workItem from="1612073068085" duration="7587000" />
+      <workItem from="1612141320885" duration="9535000" />
+      <workItem from="1612334926940" duration="1478000" />
+      <workItem from="1612418606009" duration="1179000" />
+      <workItem from="1612483749114" duration="1273000" />
+      <workItem from="1612651994399" duration="2167000" />
+      <workItem from="1612918760014" duration="2829000" />
+      <workItem from="1613455982029" duration="1650000" />
+      <workItem from="1613521570641" duration="1260000" />
+      <workItem from="1613788826192" duration="5090000" />
+      <workItem from="1613892900449" duration="1093000" />
+      <workItem from="1613962618067" duration="3160000" />
+      <workItem from="1614066977580" duration="1202000" />
+      <workItem from="1614147147649" duration="7768000" />
+      <workItem from="1614241532995" duration="1080000" />
+      <workItem from="1614308597290" duration="10638000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164642000" />
+    <option name="totallyTimeSpent" value="243676000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -729,7 +807,7 @@
     <frame x="-7" y="-7" width="2062" height="1166" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18512975" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16916168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -763,10 +841,10 @@
       <window_info anchor="right" id="Database" order="6" weight="0.32984033" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="9" side_tool="true" weight="0.32984033" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18313374" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16766468" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -776,20 +854,20 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32913843" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.499501" weight="0.3765731" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.499501" visible="true" weight="0.3765731" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32913843" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32913843" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32913843" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.500499" side_tool="true" weight="0.3765731" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.500499" side_tool="true" weight="0.32913843" />
       <window_info anchor="bottom" id="Statistic" order="10" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32913843" />
       <window_info anchor="bottom" id="Database Changes" order="12" weight="0.32913843" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32913843" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.32913843" />
-      <window_info anchor="bottom" id="调试" order="15" />
+      <window_info anchor="bottom" id="调试" order="15" sideWeight="0.499501" weight="0.3146176" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.32913843" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -800,7 +878,7 @@
       <window_info anchor="right" id="Database" order="6" weight="0.32984033" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="9" side_tool="true" weight="0.32984033" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -812,30 +890,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/controller/AuthorizationController.java</url>
-          <line>78</line>
-          <properties />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/controller/AuthorizationController.java</url>
-          <line>81</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/controller/AuthorizationController.java</url>
-          <line>80</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/controller/AuthorizationController.java</url>
-          <line>83</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.1.RELEASE/spring-security-core-5.1.1.RELEASE.jar!/org/springframework/security/authentication/ProviderManager.class</url>
           <line>70</line>
@@ -897,313 +951,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/RoleRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="97" selection-start-line="11" selection-start-column="97" selection-end-line="11" selection-end-column="97" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/TokenProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-587">
-          <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/ConfigurerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/service/UserDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/AuthUserDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="57" column="7" lean-forward="true" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/java/jdk8/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/java/jdk8/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/java/jdk8/src.zip!/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="496" selection-start-line="496" selection-end-line="496" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.2.RELEASE/spring-webmvc-5.1.2.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.2.RELEASE/spring-webmvc-5.1.2.RELEASE.jar!/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.12/tomcat-embed-core-9.0.12.jar!/javax/servlet/http/HttpServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="291" selection-start-line="291" selection-end-line="291" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.2.RELEASE/spring-webmvc-5.1.2.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="574" selection-start-line="574" selection-end-line="574" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.2.RELEASE/spring-webmvc-5.1.2.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="435" selection-start-line="435" selection-end-line="435" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.2.RELEASE/spring-webmvc-5.1.2.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="497" selection-start-line="497" selection-end-line="497" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.1.22/druid-1.1.22.jar!/com/alibaba/druid/support/http/WebStatFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.12/tomcat-embed-core-9.0.12.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.1.RELEASE/spring-security-web-5.1.1.RELEASE.jar!/org/springframework/security/web/access/intercept/FilterSecurityInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.1.RELEASE/spring-security-web-5.1.1.RELEASE.jar!/org/springframework/security/web/access/ExceptionTranslationFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.1.RELEASE/spring-security-web-5.1.1.RELEASE.jar!/org/springframework/security/web/authentication/AnonymousAuthenticationFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.1.RELEASE/spring-security-web-5.1.1.RELEASE.jar!/org/springframework/security/web/servletapi/SecurityContextHolderAwareRequestFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.1.RELEASE/spring-security-web-5.1.1.RELEASE.jar!/org/springframework/security/web/savedrequest/RequestCacheAwareFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar!/org/springframework/web/filter/CorsFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.1.RELEASE/spring-security-web-5.1.1.RELEASE.jar!/org/springframework/security/web/authentication/logout/LogoutFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.1.RELEASE/spring-security-web-5.1.1.RELEASE.jar!/org/springframework/security/web/FilterChainProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="172" selection-start-line="172" selection-end-line="172" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.1.RELEASE/spring-security-web-5.1.1.RELEASE.jar!/org/springframework/security/web/util/OnCommittedResponseWrapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="e#1383#1384#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.1.RELEASE/spring-security-web-5.1.1.RELEASE.jar!/org/springframework/security/web/header/HeaderWriterFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.12/tomcat-embed-core-9.0.12.jar!/org/apache/catalina/connector/Request.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="811" selection-start-line="811" selection-end-line="811" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.1.RELEASE/spring-security-core-5.1.1.RELEASE.jar!/org/springframework/security/core/Authentication.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JwtAuthenticationTokenFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.1.RELEASE/spring-security-core-5.1.1.RELEASE.jar!/org/springframework/security/authentication/AuthenticationProvider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.1.RELEASE/spring-security-config-5.1.1.RELEASE.jar!/org/springframework/security/config/annotation/AbstractSecurityBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.1.RELEASE/spring-security-core-5.1.1.RELEASE.jar!/org/springframework/security/authentication/UsernamePasswordAuthenticationToken.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.12/tomcat-embed-core-9.0.12.jar!/org/apache/catalina/connector/RequestFacade.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="219" selection-start-line="219" selection-end-line="219" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/RsaProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/SecurityProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/resources/config/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.1.RELEASE/spring-security-core-5.1.1.RELEASE.jar!/org/springframework/security/crypto/bcrypt/BCrypt.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="355" column="28" lean-forward="true" selection-start-line="355" selection-start-column="28" selection-end-line="355" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.1.RELEASE/spring-security-core-5.1.1.RELEASE.jar!/org/springframework/security/crypto/password/PasswordEncoder.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -1215,43 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/RegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/controller/AuthorizationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57">
-          <caret line="68" column="16" lean-forward="true" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="47" column="90" selection-start-line="47" selection-start-column="90" selection-end-line="47" selection-end-column="90" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1276,19 +986,377 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/RoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.1.RELEASE/spring-security-core-5.1.1.RELEASE.jar!/org/springframework/security/access/expression/SecurityExpressionRoot.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/service/UserDetailsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/SecurityProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JwtAuthenticationEntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JwtAccessDeniedHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/AuthUserDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/security/JwtAuthenticationTokenFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final.jar!/org/hibernate/collection/internal/PersistentSet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1843">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/RoleSmallDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/UserDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.1.RELEASE/spring-security-core-5.1.1.RELEASE.jar!/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="57" column="29" lean-forward="true" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+        <state relative-caret-position="186">
+          <caret line="53" column="51" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="51" />
+          <folding>
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final.jar!/org/hibernate/collection/internal/AbstractPersistentCollection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.1.RELEASE/spring-security-web-5.1.1.RELEASE.jar!/org/springframework/security/web/FilterChainProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.12/tomcat-embed-core-9.0.12.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1387">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.1.RELEASE/spring-security-web-5.1.1.RELEASE.jar!/org/springframework/security/web/context/SecurityContextPersistenceFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.1.RELEASE/spring-security-web-5.1.1.RELEASE.jar!/org/springframework/security/web/header/HeaderWriterFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/TokenProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1102">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/RsaProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/RoleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f9250bbc-1cdd-47d6-b551-bb712c28ce33/schema/apihelper/table/sys_project">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/config/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
+        <state relative-caret-position="551">
           <caret line="52" column="40" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/controller/AuthorizationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1596">
+          <caret line="127" column="46" selection-start-line="127" selection-start-column="46" selection-end-line="127" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/dto/JwtUserDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/RoleRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="11" column="91" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-589">
+          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/vo/UserPassVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/PageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/ProjectPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/dto/PageUtilDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/dto/ProjectPageDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/ProjectService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/ProjectRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="63" column="38" lean-forward="true" selection-start-line="63" selection-start-column="38" selection-end-line="67" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="16" column="91" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/repository/ProjectLogRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/ProjectLogServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/ProjectLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="44" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/ProjectLogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/ProjectServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
           </folding>
         </state>
       </provider>

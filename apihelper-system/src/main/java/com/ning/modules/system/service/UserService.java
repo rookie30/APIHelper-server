@@ -4,6 +4,7 @@ import com.ning.modules.security.dto.UserDto;
 import com.ning.modules.system.domain.Role;
 import com.ning.modules.system.domain.User;
 
+import java.util.Date;
 import java.util.Set;
 
 public interface UserService {

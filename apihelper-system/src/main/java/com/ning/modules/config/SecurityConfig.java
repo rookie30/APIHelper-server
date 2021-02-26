@@ -85,8 +85,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 // 禁用 CSRF
                 .csrf().disable()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
                 .addFilterBefore(corsFilter, UsernamePasswordAuthenticationFilter.class)
                 // 授权异常
                 .exceptionHandling()
@@ -125,7 +123,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // 登录授权
                 .antMatchers("/auth/**").permitAll()
                 // 注册
-                .antMatchers("/api/register").permitAll()
+                .antMatchers("/api/user/register").permitAll()
                 // 放行OPTIONS请求
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 // 所有请求都需要认证

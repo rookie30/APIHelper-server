@@ -19,6 +19,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -44,7 +45,6 @@ public class UserServiceImpl implements UserService {
             throw new EntityExistException("邮箱", resource.getEmail());
         }
         try {
-//            String encryptedPassword = RsaUtils.encryptByPrivateKey(RsaProperties.privateKey, resource.getPassword());
             resource.setPassword(new BCryptPasswordEncoder().encode(resource.getPassword()));
             resource.setUpdateBy(resource.getUsername());
             Set<Role> roles = new HashSet<>();
@@ -58,7 +58,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void update(User resource) {
-
+        String username = resource.getUsername();
+        String nickname = resource.getNickname();
+        String phone = resource.getPhone();
+        String email = resource.getEmail();
+        int gender = resource.getGender();
+        Date updateTime = new Date();
+        userRepository.update(username, nickname, phone, email, gender, updateTime);
     }
 
     @Override
@@ -78,7 +84,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void updatePass(String username, String encryptPassword) {
-
+        userRepository.updatePass(username, encryptPassword, new Date());
     }
 
     @Override
