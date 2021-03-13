@@ -11,6 +11,6 @@ public class EntityExistException extends RuntimeException {
     private static String generateMessage(String field, String val) {
 //        return StringUtils.capitalize(entity)
 //                + " with " + field + " "+ val + " existed";
-        return field + " 为 " + val + " 的账号已存在";
+        return field + " " + val + " 已存在";
     }
 }

@@ -3,6 +3,7 @@ package com.ning.modules.system.domain;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.Proxy;
 import org.hibernate.sql.Update;
 import org.springframework.data.annotation.CreatedDate;
@@ -78,6 +79,13 @@ public class User implements Serializable {
     @Column(name = "avatar_path")
     @ApiModelProperty(value = "头像地址")
     private String avatarPath;
+
+    @ApiModelProperty(value = "用户参与的项目")
+    @ManyToMany(cascade = {CascadeType.MERGE})
+    @JoinTable(name = "sys_project_user",
+            joinColumns = {@JoinColumn(name = "username", referencedColumnName = "username")},
+            inverseJoinColumns = {@JoinColumn(name = "project_id", referencedColumnName = "id")})
+    private Set<Project> projects;
 
 
 }

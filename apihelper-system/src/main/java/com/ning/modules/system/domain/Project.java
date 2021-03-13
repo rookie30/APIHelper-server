@@ -1,5 +1,6 @@
 package com.ning.modules.system.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,6 +13,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -45,4 +47,9 @@ public class Project implements Serializable {
     @Column(name = "create_by")
     @ApiModelProperty(value = "创建者")
     private String createBy;
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "projects")
+    @ApiModelProperty(value = "用户", hidden = true)
+    private Set<User> users;
 }

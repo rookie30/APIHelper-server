@@ -6,6 +6,7 @@ import lombok.Data;
 import org.hibernate.sql.Update;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -25,7 +26,6 @@ public class ProjectLog {
     @ApiModelProperty(value = "操作者")
     private String operator;
 
-
     @Column(name = "record_time")
     @ApiModelProperty(value = "记录时间")
     @LastModifiedDate
@@ -38,9 +38,17 @@ public class ProjectLog {
     @Column(name = "project_id")
     private Long projectId;
 
-    public ProjectLog(String operator, String content, Long projectId) {
+    @ApiModelProperty(value = "操作类型")
+    private String type;
+
+    public ProjectLog() {
+        super();
+    }
+
+    public ProjectLog(String operator, String content, Long projectId, String type) {
         this.operator = operator;
         this.content = content;
         this.projectId = projectId;
+        this.type = type;
     }
 }

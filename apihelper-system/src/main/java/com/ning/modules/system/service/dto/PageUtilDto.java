@@ -9,9 +9,9 @@ import java.io.Serializable;
 @Setter
 public class PageUtilDto implements Serializable {
 
-    private Integer currentPage = 1;
+    private Integer currentPage;
 
     private Integer size;
 
-    private Integer total = 0;
+    private Integer total;
 }

@@ -1,12 +1,10 @@
 package com.ning.modules.system.service.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.io.Serializable;
 
-@Getter
-@Setter
+@Data
 public class ProjectPageDto extends PageUtilDto implements Serializable {
 
     private String searchCont;
