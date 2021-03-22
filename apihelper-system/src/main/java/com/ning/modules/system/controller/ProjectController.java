@@ -46,9 +46,9 @@ public class ProjectController {
         }
         projectService.create(project);
         Map<String, Object> res = new HashMap<String, Object>(1){{
-            put("code", "200");
+            put("status", "201");
         }};
-        return ResponseEntity.ok(res);
+        return new ResponseEntity<>(res, HttpStatus.CREATED);
     }
 
     @GetMapping("/getMessage")
@@ -59,11 +59,11 @@ public class ProjectController {
         int startCount = (projectPageDto.getCurrentPage() - 1) * projectPageDto.getSize();
         List<Project> projectList = projectService.getInfo(startCount, projectPageDto.getSize(), username, projectPageDto.getSearchCont());
         Map<String, Object> res = new HashMap<String, Object>(3){{
-            put("code", "200");
+            put("status", "200");
             put("total", total);
             put("rows", projectList);
         }};
-        return ResponseEntity.ok(res);
+        return new ResponseEntity<>(res, HttpStatus.OK);
     }
 
     @DeleteMapping("/deleteProject")
@@ -71,9 +71,9 @@ public class ProjectController {
     public ResponseEntity<Object> deleteProject(@RequestBody Project project, HttpServletRequest request) {
         projectService.deleteProject(project);
         Map<String, String> res = new HashMap<String, String>(1){{
-            put("code", "200");
+            put("status", "200");
         }};
-        return ResponseEntity.ok(res);
+        return new ResponseEntity<>(res, HttpStatus.OK);
     }
 
     @GetMapping("/getMemberInfo")
@@ -82,10 +82,10 @@ public class ProjectController {
         Long projectId = Long.valueOf(request.getParameter("projectId"));
 //        List<UserInfo> users = projectUserService.findUsers(projectId);
         Map<String, Object> res = new HashMap<String, Object>(2){{
-            put("code", "200");
+            put("status", "200");
 //            put("users", users);
         }};
-        return ResponseEntity.ok(res);
+        return new ResponseEntity<>(res, HttpStatus.OK);
     }
 
     @GetMapping("/getGroupInfo")
@@ -94,10 +94,10 @@ public class ProjectController {
         Long projectId = Long.valueOf(request.getParameter("projectId"));
         List<ProjectGroup> groups = projectGroupService.findGroups(projectId);
         Map<String, Object> res = new HashMap<String, Object>(2){{
-            put("code", "200");
+            put("status", "200");
             put("groups", groups);
         }};
-        return ResponseEntity.ok(res);
+        return new ResponseEntity<>(res, HttpStatus.OK);
     }
 
     @PostMapping("/createGroup")
@@ -109,7 +109,7 @@ public class ProjectController {
         }
         projectGroupService.create(group);
         Map<String, Object> res = new HashMap<String, Object>(1){{
-            put("code", "201");
+            put("status", "201");
         }};
         return new ResponseEntity<>(res, HttpStatus.CREATED);
     }
@@ -119,7 +119,7 @@ public class ProjectController {
     public ResponseEntity<Object> getLogs(@RequestParam("projectId") String projectId) {
         List<ProjectLog> logs = projectLogService.getLogs(Long.valueOf(projectId));
         Map<String, Object> res = new HashMap<String, Object>(2){{
-            put("code", "200");
+            put("status", "200");
             put("logs", logs);
         }};
         return new ResponseEntity<>(res, HttpStatus.OK);
@@ -130,7 +130,7 @@ public class ProjectController {
     public ResponseEntity<Object> updateProject(@RequestBody Project project) {
         projectService.updateProject(project);
         Map<String, Object> res = new HashMap<String, Object>(1){{
-            put("code", "200");
+            put("status", "200");
         }};
         return new ResponseEntity<>(res, HttpStatus.OK);
     }
