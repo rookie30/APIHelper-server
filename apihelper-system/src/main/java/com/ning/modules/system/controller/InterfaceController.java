@@ -32,17 +32,17 @@ public class InterfaceController {
     private final InterfaceService interfaceService;
     private final InterfaceLogService interfaceLogService;
 
-    @GetMapping("/getAll")
-    @ApiOperation("获取参与的所有项目信息")
-    public ResponseEntity<Object> getAll(HttpServletRequest request) {
-        String username = tokenProvider.getUsername(tokenProvider.getToken(request));
-        List<Project> projectList = projectService.findAll(username);
-        Map<String, Object> res = new HashMap<String, Object>(2){{
-            put("status", "200");
-            put("projectList", projectList);
-        }};
-        return new ResponseEntity<>(res, HttpStatus.OK);
-    }
+//    @GetMapping("/getAll")
+//    @ApiOperation("获取参与的所有项目信息")
+//    public ResponseEntity<Object> getAll(HttpServletRequest request) {
+//        String username = tokenProvider.getUsername(tokenProvider.getToken(request));
+//        List<Project> projectList = projectService.findAll(username);
+//        Map<String, Object> res = new HashMap<String, Object>(2){{
+//            put("status", "200");
+//            put("projectList", projectList);
+//        }};
+//        return new ResponseEntity<>(res, HttpStatus.OK);
+//    }
 
     @GetMapping("/getInfo")
     @ApiOperation("获取项目中的所有接口信息")
@@ -58,18 +58,15 @@ public class InterfaceController {
 
     @PostMapping("/create")
     @ApiOperation("创建接口")
-    public ResponseEntity<Object> create(@RequestBody MyInterface myInterface, HttpServletRequest request) {
+    public ResponseEntity<Object> createInterface(@RequestBody MyInterface myInterface, HttpServletRequest request) {
         // 判断项目中是否已存在该接口名
-        String interfaceName = myInterface.getName();
-        Long projectId = myInterface.getProjectId();
-        Boolean isAlreadyExist = interfaceService.checkIfExisted(interfaceName, projectId);
+//        String interfaceName = myInterface.getName();
+//        Long projectId = myInterface.getProjectId();
+//        Boolean isAlreadyExist = interfaceService.checkIfExisted(interfaceName, projectId);
         Map<String, Object> res = new HashMap<>();
-        if(isAlreadyExist) {
-            throw new EntityExistException("接口名", interfaceName);
-//            res.put("status", "500");
-//            res.put("message", "接口名已存在");
-//            return new ResponseEntity<>(res, HttpStatus.BAD_REQUEST);
-        }
+//        if(isAlreadyExist) {
+//            throw new EntityExistException("接口名", interfaceName);
+//        }
         String username = tokenProvider.getUsername(tokenProvider.getToken(request));
         myInterface.setUpdateBy(username);
         interfaceService.create(myInterface);
@@ -80,12 +77,23 @@ public class InterfaceController {
     @GetMapping("/getLog")
     @ApiOperation("获取接口日志")
     public ResponseEntity<Object> getLog(HttpServletRequest request) {
-        String interfaceName = request.getParameter("interfaceName");
-        List<InterfaceLog> interfaceLogs = interfaceLogService.findAllByInterfaceName(interfaceName);
+        Long interfaceId = Long.valueOf(request.getParameter("interfaceId"));
+        List<InterfaceLog> interfaceLogs = interfaceLogService.findAllByInterfaceId(interfaceId);
         Map<String, Object> res = new HashMap<String, Object>(2) {{
             put("status", "200");
             put("logData", interfaceLogs);
         }};
+        return new ResponseEntity<>(res, HttpStatus.OK);
+    }
+
+    @PostMapping("/update")
+    @ApiOperation("更新接口信息")
+    public ResponseEntity<Object> updateInterface(@RequestBody MyInterface newInterface, HttpServletRequest request) {
+        Map<String, Object> res = new HashMap<>();
+        String username = tokenProvider.getUsername(tokenProvider.getToken(request));
+        newInterface.setUpdateBy(username);
+        interfaceService.update(newInterface);
+        res.put("status", "200");
         return new ResponseEntity<>(res, HttpStatus.OK);
     }
 }

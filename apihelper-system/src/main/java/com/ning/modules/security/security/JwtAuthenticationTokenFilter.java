@@ -29,7 +29,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     @Autowired
     private TokenProvider tokenProvider;
     @Autowired
-    private  SecurityProperties securityProperties;
+    private SecurityProperties securityProperties;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request,

@@ -1,5 +1,7 @@
 package com.ning.modules.system.domain;
 
+import com.alibaba.fastjson.annotation.JSONField;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.hibernate.sql.Update;
@@ -12,6 +14,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Entity
@@ -74,4 +77,13 @@ public class MyInterface implements Serializable {
 
     @ApiModelProperty(name = "body参数")
     private String body;
+
+    @ApiModelProperty(name = "是否使用")
+    @Column(name = "is_use")
+    private Boolean isUse = true;
+
+    @JSONField(serialize = false)
+    @ApiModelProperty(name = "接口日志")
+    @OneToMany(mappedBy = "myInterface",cascade={CascadeType.PERSIST,CascadeType.REMOVE})
+    private List<InterfaceLog> logs;
 }

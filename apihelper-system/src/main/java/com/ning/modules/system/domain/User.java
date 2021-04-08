@@ -1,5 +1,7 @@
 package com.ning.modules.system.domain;
 
+import com.alibaba.fastjson.annotation.JSONField;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
@@ -80,11 +82,12 @@ public class User implements Serializable {
     @ApiModelProperty(value = "头像地址")
     private String avatarPath;
 
+    @JSONField(serialize = false)
     @ApiModelProperty(value = "用户参与的项目")
-    @ManyToMany(cascade = {CascadeType.MERGE})
+    @ManyToMany(cascade = {CascadeType.REFRESH},fetch = FetchType.EAGER)
     @JoinTable(name = "sys_project_user",
-            joinColumns = {@JoinColumn(name = "username", referencedColumnName = "username")},
-            inverseJoinColumns = {@JoinColumn(name = "project_id", referencedColumnName = "id")})
+            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "project_id", referencedColumnName = "project_id")})
     private Set<Project> projects;
 
 

@@ -1,5 +1,6 @@
 package com.ning.modules.system.domain;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import lombok.Data;
@@ -28,9 +29,11 @@ public class InterfaceLog implements Serializable {
     @ApiModelProperty(name = "项目id")
     private Long projectId;
 
-    @Column(name = "interface_name")
-    @ApiModelProperty(name = "接口名称")
-    private String interfaceName;
+    @JSONField(serialize = false)
+    @JoinColumn(name = "interface_id")
+    @ManyToOne(fetch=FetchType.LAZY)
+    @ApiModelProperty(value = "所属接口", hidden = true)
+    private MyInterface myInterface;
 
     @ApiModelProperty(name = "日志内容")
     private String content;
@@ -51,9 +54,9 @@ public class InterfaceLog implements Serializable {
         super();
     }
 
-    public InterfaceLog(Long projectId, String interfaceName, String content, String operator, String type) {
+    public InterfaceLog(Long projectId, MyInterface myInterface, String content, String operator, String type) {
         this.projectId = projectId;
-        this.interfaceName = interfaceName;
+        this.myInterface = myInterface;
         this.content = content;
         this.operator = operator;
         this.type = type;

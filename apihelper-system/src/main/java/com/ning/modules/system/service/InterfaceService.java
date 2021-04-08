@@ -11,4 +11,6 @@ public interface InterfaceService {
     void create(MyInterface myInterface);
 
     Boolean checkIfExisted(String interfaceName, Long projectId);
+
+    void update(MyInterface newInterface);
 }

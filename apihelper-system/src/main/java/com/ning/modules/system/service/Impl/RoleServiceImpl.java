@@ -20,4 +20,9 @@ public class RoleServiceImpl implements RoleService {
     public List<Role> findByUserId(Long id) {
         return new ArrayList<>(roleRepository.findByUserId(id));
     }
+
+    @Override
+    public Role findByLevel(Integer level) {
+        return roleRepository.findByLevel(level);
+    }
 }

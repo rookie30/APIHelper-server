@@ -11,5 +11,6 @@ import java.util.List;
 @Repository
 public interface InterfaceLogRepository extends JpaRepository<InterfaceLog, Long>, JpaSpecificationExecutor<InterfaceLog> {
 
-    List<InterfaceLog> findAllByInterfaceName(String interfaceName);
+    @Query(value = "select * from sys_interface_log where interface_id = ?1 ", nativeQuery = true)
+    List<InterfaceLog> findAllByInterfaceId(Long interfaceId);
 }

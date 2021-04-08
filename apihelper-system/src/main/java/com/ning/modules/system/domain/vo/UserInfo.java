@@ -14,4 +14,17 @@ public class UserInfo {
     private String phone;
 
     private Integer gender;
+
+    public UserInfo() {
+        super();
+    }
+
+    public UserInfo(String username, String nickname,
+                    String email, String phone, Integer gender) {
+        this.username = username;
+        this.nickname = nickname;
+        this.phone = phone;
+        this.email = email;
+        this.gender = gender;
+    }
 }

@@ -1,7 +1,9 @@
 package com.ning.modules.system.domain;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.sql.Update;
@@ -15,8 +17,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "sys_project")
 @EntityListeners(AuditingEntityListener.class)
@@ -25,6 +26,7 @@ public class Project implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotNull(groups = Update.class)
+    @Column(name = "project_id")
     private Long id;
 
     @NotBlank(message = "项目名称不能为空")
@@ -48,7 +50,7 @@ public class Project implements Serializable {
     @ApiModelProperty(value = "创建者")
     private String createBy;
 
-    @JsonIgnore
+    @JSONField(serialize = false)
     @ManyToMany(mappedBy = "projects")
     @ApiModelProperty(value = "用户", hidden = true)
     private Set<User> users;

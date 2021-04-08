@@ -6,7 +6,9 @@ import com.ning.modules.security.dto.UserDto;
 import com.ning.modules.security.service.UserDetailsServiceImpl;
 import com.ning.modules.system.domain.Role;
 import com.ning.modules.system.domain.User;
+import com.ning.modules.system.repository.RoleRepository;
 import com.ning.modules.system.repository.UserRepository;
+import com.ning.modules.system.service.RoleService;
 import com.ning.modules.system.service.UserService;
 import com.ning.utils.EntityExistException;
 import com.ning.utils.RsaUtils;
@@ -32,6 +34,7 @@ public class UserServiceImpl implements UserService {
     private final AuthenticationManager authenticationManager;
     private final UserDetailsServiceImpl userDetailsService;
     private final TokenProvider tokenProvider;
+    private final RoleRepository roleRepository;
 
     @Override
     public void create(User resource) {
@@ -47,8 +50,15 @@ public class UserServiceImpl implements UserService {
         try {
             resource.setPassword(new BCryptPasswordEncoder().encode(resource.getPassword()));
             resource.setUpdateBy(resource.getUsername());
-            Set<Role> roles = new HashSet<>();
-            Role role = new Role();
+            // 新创建的用户默认权限等级为0
+            Role role = roleRepository.findByLevel(0);
+            if(role.getUsers() == null) {
+                role.setUsers(new HashSet<>());
+            }
+            role.getUsers().add(resource);
+            resource.setRoles(new HashSet<>());
+            resource.getRoles().add(role);
+            roleRepository.save(role);
             userRepository.save(resource);
         } catch (Exception e) {
             e.printStackTrace();

@@ -41,4 +41,7 @@ public interface ProjectRepository extends JpaRepository<Project, Long>, JpaSpec
     List<Project> findAllByCreateBy(String username);
 
     Project findByCreateByAndCreateTime(String username, Date createTime);
+
+    @Query(value = "select * from sys_project where project_id = ?1", nativeQuery = true)
+    Project findByProjectId(Long projectId);
 }

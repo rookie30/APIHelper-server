@@ -8,5 +8,5 @@ public interface InterfaceLogService {
 
     void add(InterfaceLog log);
 
-    List<InterfaceLog> findAllByInterfaceName(String interfaceName);
+    List<InterfaceLog> findAllByInterfaceId(Long interfaceId);
 }

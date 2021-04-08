@@ -128,4 +128,15 @@ public class AuthorizationController {
         return new ResponseEntity<>(new Date(), HttpStatus.OK);
     }
 
+    @GetMapping("/test1")
+    public ResponseEntity<Object> test1(HttpServletRequest request) {
+        String account = request.getParameter("account");
+        Map<String, Object> res = new HashMap<>();
+        return new ResponseEntity<>(account, HttpStatus.OK);
+    }
+
+    @PostMapping("/test2")
+    public ResponseEntity<Object> test2(@RequestParam Map<String, Object> params) {
+        return new ResponseEntity<>(params, HttpStatus.OK);
+    }
 }

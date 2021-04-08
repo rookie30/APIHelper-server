@@ -11,8 +11,6 @@ import java.util.Set;
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Long>, JpaSpecificationExecutor<Role> {
 
-    Role findByName(String name);
-
     /**
      * 根据用户ID查询
      * @param id 用户ID
@@ -21,4 +19,6 @@ public interface RoleRepository extends JpaRepository<Role, Long>, JpaSpecificat
     @Query(value = "SELECT r.* FROM sys_role r, sys_users_roles u WHERE " +
             "r.role_id = u.role_id AND u.user_id = ?1",nativeQuery = true)
     Set<Role> findByUserId(Long id);
+
+    Role findByLevel(Integer level);
 }

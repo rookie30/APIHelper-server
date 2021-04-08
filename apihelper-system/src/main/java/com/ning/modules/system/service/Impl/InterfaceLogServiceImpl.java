@@ -20,7 +20,7 @@ public class InterfaceLogServiceImpl implements InterfaceLogService {
     }
 
     @Override
-    public List<InterfaceLog> findAllByInterfaceName(String interfaceName) {
-        return interfaceLogRepository.findAllByInterfaceName(interfaceName);
+    public List<InterfaceLog> findAllByInterfaceId(Long interfaceId) {
+        return interfaceLogRepository.findAllByInterfaceId(interfaceId);
     }
 }
