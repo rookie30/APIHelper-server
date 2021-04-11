@@ -26,6 +26,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -36,11 +37,17 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.util.UriComponentsBuilder;
+import reactor.core.publisher.Mono;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -125,18 +132,45 @@ public class AuthorizationController {
 
     @GetMapping("/test")
     public ResponseEntity<Object> test() {
-        return new ResponseEntity<>(new Date(), HttpStatus.OK);
+        WebClient client = WebClient.create("http://47.111.151.229");
+        //定义url参数
+        MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
+        params.add("year", "2021");
+        params.add("month", "4");
+        params.add("day", "10");
+        String uri = UriComponentsBuilder.fromUriString("/api/user/getLoginNumber")
+                .queryParams(params)
+                .toUriString();
+        Mono<String> result = client.get()
+                .uri(uri)
+                .retrieve()
+                .bodyToMono(String.class);
+        Map<String, Object> res = new HashMap<>();
+        res.put("result", result.block());
+        return new ResponseEntity<>(res, HttpStatus.OK);
     }
 
     @GetMapping("/test1")
     public ResponseEntity<Object> test1(HttpServletRequest request) {
         String account = request.getParameter("account");
         Map<String, Object> res = new HashMap<>();
-        return new ResponseEntity<>(account, HttpStatus.OK);
+        res.put("status", 200);
+        res.put("account", account);
+        return new ResponseEntity<>(res, HttpStatus.OK);
     }
 
     @PostMapping("/test2")
-    public ResponseEntity<Object> test2(@RequestParam Map<String, Object> params) {
-        return new ResponseEntity<>(params, HttpStatus.OK);
+    public ResponseEntity<Object> test2(@RequestBody Map<String, Object> params) {
+        Map<String, Object> res = new HashMap<>();
+        res.put("status", "200");
+        res.put("params", params);
+        return new ResponseEntity<>(res, HttpStatus.OK);
     }
+
+    @GetMapping("/test3")
+    public ResponseEntity<Object> test3() {
+        return new ResponseEntity<>(new Date(), HttpStatus.OK);
+    }
+
+
 }

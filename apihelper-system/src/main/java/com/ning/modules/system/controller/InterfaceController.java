@@ -1,25 +1,37 @@
 package com.ning.modules.system.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import com.github.javafaker.Faker;
 import com.ning.modules.security.TokenProvider;
 import com.ning.modules.system.domain.InterfaceLog;
 import com.ning.modules.system.domain.MyInterface;
-import com.ning.modules.system.domain.Project;
 import com.ning.modules.system.service.InterfaceLogService;
 import com.ning.modules.system.service.InterfaceService;
 import com.ning.modules.system.service.ProjectService;
-import com.ning.utils.EntityExistException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.reactive.function.client.WebClientResponseException;
+import org.springframework.web.util.UriComponentsBuilder;
+import reactor.core.publisher.Mono;
 
 import javax.servlet.http.HttpServletRequest;
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
+import java.util.regex.Pattern;
 
 @RestController
 @RequestMapping("/api/interface")
@@ -32,17 +44,7 @@ public class InterfaceController {
     private final InterfaceService interfaceService;
     private final InterfaceLogService interfaceLogService;
 
-//    @GetMapping("/getAll")
-//    @ApiOperation("获取参与的所有项目信息")
-//    public ResponseEntity<Object> getAll(HttpServletRequest request) {
-//        String username = tokenProvider.getUsername(tokenProvider.getToken(request));
-//        List<Project> projectList = projectService.findAll(username);
-//        Map<String, Object> res = new HashMap<String, Object>(2){{
-//            put("status", "200");
-//            put("projectList", projectList);
-//        }};
-//        return new ResponseEntity<>(res, HttpStatus.OK);
-//    }
+    private Faker faker = new Faker();
 
     @GetMapping("/getInfo")
     @ApiOperation("获取项目中的所有接口信息")
@@ -59,14 +61,7 @@ public class InterfaceController {
     @PostMapping("/create")
     @ApiOperation("创建接口")
     public ResponseEntity<Object> createInterface(@RequestBody MyInterface myInterface, HttpServletRequest request) {
-        // 判断项目中是否已存在该接口名
-//        String interfaceName = myInterface.getName();
-//        Long projectId = myInterface.getProjectId();
-//        Boolean isAlreadyExist = interfaceService.checkIfExisted(interfaceName, projectId);
         Map<String, Object> res = new HashMap<>();
-//        if(isAlreadyExist) {
-//            throw new EntityExistException("接口名", interfaceName);
-//        }
         String username = tokenProvider.getUsername(tokenProvider.getToken(request));
         myInterface.setUpdateBy(username);
         interfaceService.create(myInterface);
@@ -96,4 +91,29 @@ public class InterfaceController {
         res.put("status", "200");
         return new ResponseEntity<>(res, HttpStatus.OK);
     }
+
+    @PostMapping("/manualTest")
+    @ApiOperation("手动测试")
+    public ResponseEntity<Object> manualTest(@RequestBody MyInterface myInterface) {
+        Mono<String> result = interfaceService.manualTest(myInterface);
+        Map<String, Object> res = new HashMap<>();
+        try {
+            String blockResult = result.block();
+            res.put("data", blockResult);
+            return new ResponseEntity<>(res, HttpStatus.OK);
+        } catch (RuntimeException err) {
+            res.put("data", err.getMessage());
+            return new ResponseEntity<>(res, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PostMapping("/autoTest")
+    @ApiOperation("自动测试")
+    public ResponseEntity<Object> autoTest(@RequestBody MyInterface myInterface) {
+        Map<String, Object> res = new HashMap<>();
+        List<Map<String, Object>> testResult = interfaceService.autoTest(myInterface);
+        res.put("data", testResult);
+        return new ResponseEntity<>(res, HttpStatus.OK);
+    }
+
 }

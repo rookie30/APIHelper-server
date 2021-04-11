@@ -1,5 +1,8 @@
 package com.ning.modules.system.service.Impl;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.github.javafaker.Faker;
 import com.ning.modules.system.domain.InterfaceLog;
 import com.ning.modules.system.domain.MyInterface;
 import com.ning.modules.system.repository.InterfaceRepository;
@@ -8,11 +11,17 @@ import com.ning.modules.system.service.InterfaceService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.reactive.function.client.WebClientResponseException;
+import org.springframework.web.util.UriComponentsBuilder;
+import reactor.core.publisher.Mono;
 
 import java.text.DateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
+import java.util.regex.Pattern;
 
 @Service
 @RequiredArgsConstructor
@@ -21,6 +30,7 @@ public class InterfaceServiceImpl implements InterfaceService {
     private final InterfaceRepository interfaceRepository;
     private final DateFormat dateFormat = DateFormat.getDateTimeInstance();
     private final InterfaceLogService interfaceLogService;
+    private Faker faker = new Faker();
 
     @Override
     public List<MyInterface> getByProjectId(Long projectId) {
@@ -80,4 +90,166 @@ public class InterfaceServiceImpl implements InterfaceService {
         interfaceLogService.add(interfaceLog);
         interfaceRepository.save(oldInterface);
     }
+
+    @Override
+    public Mono<String> manualTest(MyInterface myInterface) {
+        String requestType = myInterface.getRequestType();
+        if(("GET").equals(requestType)) {
+            return this.getMethod(myInterface);
+        } else {
+            return this.postMethod(myInterface);
+        }
+    }
+
+    @Override
+    public List<Map<String, Object>> autoTest(MyInterface myInterface) {
+        String requestType = myInterface.getRequestType();
+        if(("GET").equals(requestType)) {
+            return this.autoGetMethod(myInterface);
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * 手动测试GET方法
+     * @param myInterface
+     * @return
+     */
+    private Mono<String> getMethod(MyInterface myInterface) {
+        MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
+        List<Map<String, String>> interfaceParams = JSONArray.parseObject(myInterface.getParams(), List.class);
+        if(interfaceParams.size() != 0) {
+            for (int i = 0; i < interfaceParams.size(); i++) {
+                params.add(interfaceParams.get(i).get("key"), interfaceParams.get(i).get("value"));
+            }
+        }
+        WebClient client = WebClient.create(myInterface.getRequestUrl());
+        String uri = UriComponentsBuilder.fromUriString("")
+                .queryParams(params)
+                .toUriString();
+        return client
+                .get()
+                .uri(uri)
+                .retrieve()
+                .bodyToMono(String.class)
+                .doOnError(WebClientResponseException.class, err -> {
+                    throw new RuntimeException(err.getResponseBodyAsString());
+                });
+    }
+
+    /**
+     * 手动测试POST方法
+     * @param myInterface
+     * @return
+     */
+    private Mono<String> postMethod(MyInterface myInterface) {
+        Map<String, Object> interfaceBody = (Map<String, Object>) JSON.parse(myInterface.getBody());
+        List<Map<String, String>> bodyParams = (List<Map<String, String>>) interfaceBody.get("content");
+        Map<String, String> body = new HashMap<>();
+        if(bodyParams.size() != 0) {
+            for (int i = 0; i < bodyParams.size(); i++) {
+                body.put(bodyParams.get(i).get("key"), bodyParams.get(i).get("value"));
+            }
+        }
+        return WebClient.create(myInterface.getRequestUrl())
+                .post()
+                .syncBody(body)
+                .retrieve()
+                .bodyToMono(String.class)
+                .doOnError(WebClientResponseException.class, err -> {
+                    throw new RuntimeException(err.getResponseBodyAsString());
+                });
+    }
+
+    /**
+     * 自动测试-GET
+     * @param myInterface
+     * @return
+     */
+    private List<Map<String, Object>> autoGetMethod(MyInterface myInterface) {
+        List<Map<String, Object>> res = new ArrayList<>();
+        List<String> keyList = new ArrayList<>(); // key数组
+        List<Map<String, String>> interfaceParams = JSONArray.parseObject(myInterface.getParams(), List.class);
+        // 将key提取出来，存入key数组中
+        if(interfaceParams.size() != 0) {
+            for (int i = 0; i < interfaceParams.size(); i++) {
+                keyList.add(interfaceParams.get(i).get("key"));
+            }
+        }
+        int count = 10; // 循环发送10次请求
+        for (int i = 0; i < count; i++) {
+            MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
+            Map<String, String> paramsMap = new HashMap<>(); // 参数map
+            // 遍历key数组，根据key值fake数据
+            for (int j = 0; j < keyList.size(); j++) {
+                String key = keyList.get(j);
+                String param = fakeParams(key);
+                params.add(key, param);
+                paramsMap.put(key, param);
+            }
+            // 发送请求
+            WebClient client = WebClient.create(myInterface.getRequestUrl());
+            String uri = UriComponentsBuilder.fromUriString("")
+                    .queryParams(params)
+                    .toUriString();
+            Mono<String> result = client
+                    .get()
+                    .uri(uri)
+                    .retrieve()
+                    .bodyToMono(String.class)
+                    .doOnError(WebClientResponseException.class, err -> {
+                        throw new RuntimeException(err.getResponseBodyAsString());
+                    });
+            // 记录结果
+            Map<String, Object> resultMap = new HashMap<>(); // 测试结果map
+            resultMap.put("params", paramsMap);
+            resultMap.put("index", i + 1);
+            try {
+                String blockResult = result.block();
+                resultMap.put("result", blockResult);
+            }catch (RuntimeException err) {
+                resultMap.put("result", err.getMessage());
+            }finally {
+                res.add(resultMap);
+            }
+        }
+        return res;
+    }
+
+    /**
+     * fake参数
+     * @param key
+     * @return
+     */
+    private String fakeParams(String key) {
+        // 判断key是否为密码类型
+        if(Pattern.matches(".*(password).*", key)) {
+            return faker.internet().password();
+        }
+        // 账号类型
+        if(Pattern.matches(".*(username|account).*", key)) {
+            int len = faker.number().numberBetween(5, 20);
+            return faker.number().digits(len);
+        }
+        // 城市名称类型
+        if(Pattern.matches(".*(city).*", key)) {
+            return faker.address().cityName();
+        }
+        // 图片类型
+        if(Pattern.matches(".*(avatar|img|image|picture).*", key)) {
+            return faker.internet().avatar();
+        }
+        // 日期型
+        if(Pattern.matches(".*(date|time|day).*", key)) {
+            return String.valueOf(faker.date().past(10, TimeUnit.DAYS));
+        }
+        // 电话号码型
+        if(Pattern.matches(".*(phone).*", key)) {
+            return faker.phoneNumber().phoneNumber();
+        }
+        return null;
+    }
+
+
 }
