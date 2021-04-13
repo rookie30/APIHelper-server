@@ -2,6 +2,7 @@ package com.ning.modules.system.service.Impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.github.javafaker.Faker;
 import com.ning.modules.system.domain.InterfaceLog;
 import com.ning.modules.system.domain.MyInterface;
@@ -26,6 +27,8 @@ import java.util.regex.Pattern;
 @Service
 @RequiredArgsConstructor
 public class InterfaceServiceImpl implements InterfaceService {
+
+    private static final Integer testCount = 10;
 
     private final InterfaceRepository interfaceRepository;
     private final DateFormat dateFormat = DateFormat.getDateTimeInstance();
@@ -107,7 +110,7 @@ public class InterfaceServiceImpl implements InterfaceService {
         if(("GET").equals(requestType)) {
             return this.autoGetMethod(myInterface);
         } else {
-            return null;
+            return this.autoPostMethod(myInterface);
         }
     }
 
@@ -177,8 +180,7 @@ public class InterfaceServiceImpl implements InterfaceService {
                 keyList.add(interfaceParams.get(i).get("key"));
             }
         }
-        int count = 10; // 循环发送10次请求
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < testCount; i++) {
             MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
             Map<String, String> paramsMap = new HashMap<>(); // 参数map
             // 遍历key数组，根据key值fake数据
@@ -218,13 +220,63 @@ public class InterfaceServiceImpl implements InterfaceService {
     }
 
     /**
+     * 自动测试-POST
+     * @param myInterface
+     * @return
+     */
+    private List<Map<String, Object>> autoPostMethod(MyInterface myInterface) {
+        List<Map<String, Object>> res = new ArrayList<>();
+        List<String> keyList = new ArrayList<>(); // key数组
+        List<Map<String, String>> interfaceBody = (List<Map<String, String>>) JSON.parseObject(myInterface.getBody()).get("content");
+        // 将key提取出来
+        if(interfaceBody.size() != 0) {
+            for (int i = 0; i < interfaceBody.size(); i++) {
+                keyList.add(interfaceBody.get(i).get("key"));
+            }
+        }
+        for (int i = 0; i < testCount; i++) {
+            MultiValueMap<String, String> bodys = new LinkedMultiValueMap<>();
+            Map<String, String> paramsMap = new HashMap<>(); // 参数map
+            // 遍历key数组，根据key值fake数据
+            for (int j = 0; j < keyList.size(); j++) {
+                String key = keyList.get(j);
+                String param = fakeParams(key);
+                bodys.add(key, param);
+                paramsMap.put(key, param);
+            }
+            // 发送请求
+            WebClient client = WebClient.create(myInterface.getRequestUrl());
+            Mono<String> result = client
+                    .post()
+                    .syncBody(bodys)
+                    .retrieve()
+                    .bodyToMono(String.class).doOnError(WebClientResponseException.class, err -> {
+                        throw new RuntimeException(err.getResponseBodyAsString());
+                    });
+            // 记录结果
+            Map<String, Object> resultMap = new HashMap<>(); // 测试结果map
+            resultMap.put("params", paramsMap);
+            resultMap.put("index", i + 1);
+            try {
+                String blockResult = result.block();
+                resultMap.put("result", blockResult);
+            }catch (RuntimeException err) {
+                resultMap.put("result", err.getMessage());
+            }finally {
+                res.add(resultMap);
+            }
+        }
+        return res;
+    }
+
+    /**
      * fake参数
      * @param key
      * @return
      */
     private String fakeParams(String key) {
         // 判断key是否为密码类型
-        if(Pattern.matches(".*(password).*", key)) {
+        if(Pattern.matches(".*(password|pwd).*", key)) {
             return faker.internet().password();
         }
         // 账号类型

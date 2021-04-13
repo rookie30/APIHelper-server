@@ -2,25 +2,14 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/ProjectController.java" line="75" />
-    <bookmark url="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/InterfaceServiceImpl.java" line="146" />
+    <bookmark url="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/InterfaceServiceImpl.java" line="149" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="673480ba-6023-4148-8db8-9b9ba2cd30d0" name="默认" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/controller/AuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/controller/AuthorizationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/InterfaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/InterfaceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/InterfaceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/InterfaceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/InterfaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/InterfaceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/controller/AuthorizationController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/controller/AuthorizationController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/controller/AuthorizationController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/controller/AuthorizationController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/controller/AuthorizationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/controller/AuthorizationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/dto/JwtUserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/security/dto/JwtUserDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/controller/InterfaceController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/controller/InterfaceController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/controller/InterfaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/controller/InterfaceController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/service/Impl/InterfaceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/service/Impl/InterfaceServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/service/InterfaceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/apihelper-system/target/classes/com/ning/modules/system/service/InterfaceService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/apihelper-system/target/" />
@@ -65,16 +54,16 @@
     <session id="-1929168160">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="73" />
+          <entry key="project.closed" value="76" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.33" value="1" />
-          <entry key="project.open.time.34" value="5" />
+          <entry key="project.open.time.34" value="6" />
           <entry key="project.open.time.35" value="5" />
-          <entry key="project.open.time.36" value="6" />
+          <entry key="project.open.time.36" value="7" />
           <entry key="project.open.time.37" value="5" />
           <entry key="project.open.time.38" value="8" />
           <entry key="project.open.time.39" value="2" />
@@ -89,6 +78,7 @@
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.5" value="9" />
+          <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.6" value="1" />
@@ -96,7 +86,7 @@
           <entry key="project.open.time.72" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="79" />
+          <entry key="project.opened" value="82" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -106,7 +96,7 @@
           <entry key="sql" value="1" />
           <entry key="sys_project" value="1" />
           <entry key="sys_user" value="2" />
-          <entry key="xml" value="29" />
+          <entry key="xml" value="30" />
           <entry key="yml" value="29" />
         </counts>
       </usages-collector>
@@ -116,14 +106,14 @@
           <entry key="Database Element" value="3" />
           <entry key="JAVA" value="679" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="29" />
+          <entry key="XML" value="30" />
           <entry key="YAML" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="31" />
-          <entry key="java" value="51450" />
+          <entry key="java" value="52011" />
           <entry key="txt" value="23" />
           <entry key="xml" value="145" />
           <entry key="yml" value="66" />
@@ -131,7 +121,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="51442" />
+          <entry key="JAVA" value="52003" />
           <entry key="PLAIN_TEXT" value="54" />
           <entry key="SQL" value="6" />
           <entry key="Spring Data QL" value="2" />
@@ -148,8 +138,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/InterfaceController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1125">
-                  <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+                <state relative-caret-position="334">
+                  <caret line="118" column="1" lean-forward="true" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -160,7 +150,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/InterfaceService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
+                <state relative-caret-position="323">
                   <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
                 </state>
               </provider>
@@ -169,26 +159,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/controller/AuthorizationController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="72">
-                  <caret line="154" column="53" selection-start-line="154" selection-start-column="53" selection-end-line="154" selection-end-column="53" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar!/org/springframework/web/util/UriComponentsBuilder.class">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="6916">
-                  <caret line="406" column="67" selection-start-line="406" selection-start-column="54" selection-end-line="406" selection-end-column="67" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/apihelper-system/pom.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1064">
-                  <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
+                <state relative-caret-position="2033">
+                  <caret line="156" column="17" selection-start-line="156" selection-start-column="17" selection-end-line="156" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -196,8 +168,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/InterfaceServiceImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1254">
-                  <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
+                <state relative-caret-position="1273">
+                  <caret line="91" column="24" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -281,8 +253,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/InterfaceServiceImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="206" column="40" selection-start-line="206" selection-start-column="40" selection-end-line="206" selection-end-column="40" />
+                <state relative-caret-position="329">
+                  <caret line="261" column="43" selection-start-line="261" selection-start-column="43" selection-end-line="261" selection-end-column="43" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -398,8 +370,8 @@
         <option value="$PROJECT_DIR$/apihelper-system/pom.xml" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/dto/InterfaceErrorDto.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/InterfaceService.java" />
-        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/InterfaceController.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/controller/AuthorizationController.java" />
+        <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/InterfaceController.java" />
         <option value="$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/InterfaceServiceImpl.java" />
       </list>
     </option>
@@ -446,6 +418,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -590,8 +564,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -603,7 +575,7 @@
     <property name="SearchEverywhereHistoryKey" value="AuthUserDto&#9;FILE&#9;file://D:/workPlace/APIHelper/APIHelper-server/apihelper-system/src/main/java/com/ning/modules/security/dto/AuthUserDto.java&#10;authUserDto&#9;PSI&#9;JAVA://com.ning.modules.security.dto.AuthUserDto&#10;JwtToken&#9;PSI&#9;JAVA://com.ning.utils.JwtTokenUtils&#10;auditorAware&#9;PSI&#9;JAVA://org.springframework.data.domain.AuditorAware" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1618151416367" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1618153240482" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/apihelper-common/src/main/java/com/ning" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../eladmin/eladmin-server" />
@@ -728,7 +700,10 @@
       <workItem from="1618105371485" duration="6198000" />
       <workItem from="1618119480821" duration="1759000" />
       <workItem from="1618121563097" duration="6050000" />
-      <workItem from="1618138432881" duration="9622000" />
+      <workItem from="1618138432881" duration="11634000" />
+      <workItem from="1618191421244" duration="1717000" />
+      <workItem from="1618215759137" duration="695000" />
+      <workItem from="1618285497249" duration="4054000" />
     </task>
     <task id="LOCAL-00001" summary="实现了部分功能">
       <created>1614346531541</created>
@@ -741,7 +716,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="482302000" />
+    <option name="totallyTimeSpent" value="490780000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -756,7 +731,7 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22922252" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23927614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -766,7 +741,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.499501" visible="true" weight="0.35838926" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.499501" visible="true" weight="0.31275168" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1028,9 +1003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
           <caret line="201" column="32" selection-start-line="201" selection-start-column="32" selection-end-line="201" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1062,9 +1034,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1106,17 +1075,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/utils/BadRequestException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/ProjectGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/dto/InterfaceErrorDto.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar!/org/springframework/web/util/UriComponentsBuilder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6916">
+        <state relative-caret-position="362">
           <caret line="406" column="67" selection-start-line="406" selection-start-column="54" selection-end-line="406" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/pom.xml">
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/controller/AuthorizationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
+        <state relative-caret-position="2033">
+          <caret line="156" column="17" selection-start-line="156" selection-start-column="17" selection-end-line="156" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1141,13 +1125,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/utils/BadRequestException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1182,6 +1159,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/InterfaceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/utils/EntityExistException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -1196,41 +1180,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/domain/ProjectGroup.java">
+    <entry file="file://$PROJECT_DIR$/apihelper-system/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/dto/InterfaceErrorDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/InterfaceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/security/controller/AuthorizationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="154" column="53" selection-start-line="154" selection-start-column="53" selection-end-line="154" selection-end-column="53" />
+        <state relative-caret-position="950">
+          <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="54" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/controller/InterfaceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1125">
-          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+        <state relative-caret-position="334">
+          <caret line="118" column="1" lean-forward="true" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1239,8 +1199,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apihelper-system/src/main/java/com/ning/modules/system/service/Impl/InterfaceServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="206" column="40" selection-start-line="206" selection-start-column="40" selection-end-line="206" selection-end-column="40" />
+        <state relative-caret-position="329">
+          <caret line="261" column="43" selection-start-line="261" selection-start-column="43" selection-end-line="261" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
