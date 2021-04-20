@@ -1,6 +1,7 @@
 package com.ning.modules.security.controller;
 
 import cn.hutool.core.util.IdUtil;
+import com.github.javafaker.Faker;
 import com.ning.modules.config.LoginCodeEnum;
 import com.ning.modules.config.LoginProperties;
 import com.ning.modules.config.RsaProperties;

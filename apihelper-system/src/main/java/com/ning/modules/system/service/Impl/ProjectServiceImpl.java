@@ -167,6 +167,9 @@ public class ProjectServiceImpl implements ProjectService {
         if(projects.contains(project)) {
             throw new EntityExistException("成员", user.getUsername());
         }
+        if(user.getProjects() == null) {
+            user.setProjects(new HashSet<>());
+        }
         user.getProjects().add(project);
         project.getUsers().add(user);
         projectRepository.save(project);

@@ -2,11 +2,9 @@ package com.ning.modules.system.controller;
 
 import com.ning.modules.security.TokenProvider;
 import com.ning.modules.system.domain.Project;
-import com.ning.modules.system.domain.ProjectGroup;
 import com.ning.modules.system.domain.ProjectLog;
 import com.ning.modules.system.domain.User;
 import com.ning.modules.system.domain.vo.UserInfo;
-import com.ning.modules.system.service.ProjectGroupService;
 import com.ning.modules.system.service.ProjectLogService;
 import com.ning.modules.system.service.ProjectService;
 import com.ning.modules.system.service.UserService;
@@ -32,7 +30,6 @@ public class ProjectController {
 
     private final TokenProvider tokenProvider;
     private final ProjectService projectService;
-    private final ProjectGroupService projectGroupService;
     private final ProjectLogService projectLogService;
     private final RedisUtils redisUtils;
 
@@ -88,31 +85,6 @@ public class ProjectController {
         return new ResponseEntity<>(res, HttpStatus.OK);
     }
 
-    @GetMapping("/getGroupInfo")
-    @ApiOperation("获取项目组信息")
-    public ResponseEntity<Object> getGroupInfo(HttpServletRequest request) {
-        Long projectId = Long.valueOf(request.getParameter("projectId"));
-        List<ProjectGroup> groups = projectGroupService.findGroups(projectId);
-        Map<String, Object> res = new HashMap<String, Object>(2){{
-            put("status", "200");
-            put("groups", groups);
-        }};
-        return new ResponseEntity<>(res, HttpStatus.OK);
-    }
-
-    @PostMapping("/createGroup")
-    @ApiOperation("创建项目小组")
-    public ResponseEntity<Object> createGroup(@Validated @RequestBody ProjectGroup group, HttpServletRequest request) {
-        if(("").equals(group.getLeader())) {
-            String username = tokenProvider.getUsername(tokenProvider.getToken(request));
-            group.setLeader(username);
-        }
-        projectGroupService.create(group);
-        Map<String, Object> res = new HashMap<String, Object>(1){{
-            put("status", "201");
-        }};
-        return new ResponseEntity<>(res, HttpStatus.CREATED);
-    }
 
     @GetMapping("/getLog")
     @ApiOperation("获取项目日志")

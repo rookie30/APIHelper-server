@@ -82,7 +82,7 @@ public class User implements Serializable {
     @ApiModelProperty(value = "头像地址")
     private String avatarPath;
 
-    @JSONField(serialize = false)
+//    @JSONField(serialize = false)
     @ApiModelProperty(value = "用户参与的项目")
     @ManyToMany(cascade = {CascadeType.REFRESH},fetch = FetchType.EAGER)
     @JoinTable(name = "sys_project_user",

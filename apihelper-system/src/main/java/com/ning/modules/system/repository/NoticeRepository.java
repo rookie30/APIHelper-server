@@ -13,8 +13,9 @@ public interface NoticeRepository extends JpaRepository<Notice, Long>, JpaSpecif
 
     Integer countByRecipient(String username);
 
+
     List<Notice> findAllByRecipient(String username);
 
-    @Query(value = "select count(*) from sys_notice where create_by = ?1 and type = 1", nativeQuery = true)
+    @Query(value = "select count(*) from sys_notice where recipient = ?1 and type = 0", nativeQuery = true)
     Integer findUnreadCount(String username);
 }
